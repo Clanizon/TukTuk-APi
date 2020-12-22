@@ -1,0 +1,84 @@
+### create product
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+    "name":"Moto e4 plus",
+    "price":1400
+}
+
+### get all billing
+GET http://localhost:5000/billing
+
+### get product by id
+GET http://localhost:3000/products/5f5a79f01c51c00c84c4588
+
+### delete product by id
+DELETE http://localhost:3000/products/5f5a6d0164ac670b3c7b8be8
+
+### update product by id
+PATCH http://localhost:3000/products/5f5a6dbb64ac670b3c7b8ba
+content-type: application/json
+
+{
+    "price" : 50000
+}
+
+### 
+GET http://localhost:3000/xyc
+
+
+### Authenticate each url
+GET http://localhost:3000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjVjOThkMTNhYjMzYzBjOGQyY2Y1YTQiLCJ1c2VybmFtZSI6ImFzd2F0aCIsImlhdCI6MTU5OTkwNDQ3OCwiZXhwIjoxNTk5OTA0NTk4fQ.s4MLEfgAxiXaFO43WvFnEoIx6-WCoBTeFcDTgZywajc
+
+
+### Creat user
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "username" : "aswathpandiyan3",
+    "password" : "password"
+}
+
+### Login user
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "username" : "aswath",
+    "password" : "password"
+}
+
+### refresh token
+POST http://localhost:3000/refresh-token
+content-type: application/json
+
+{
+    
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk5OTA1MzAsImV4cCI6MTYzMTU0ODEzMCwiYXVkIjoiNWY1Y2E2MjVhMzgxMmIwZWY2ZjU2ZjJlIiwiaXNzIjoiY2xhbml6b24uY29tIn0.esBDYaxJHOaGOpHn0otx1psk-vxEpUEZjOAghc_fS3A"
+}
+
+
+
+
+
+
+
+
+
+### not defined path
+POST http://localhost:3000/test
+content-type: application/json
+
+{
+    "name":"Aswath",
+    "age":25
+}
+
+### test with urlformencode
+POST http://localhost:3000/test
+content-type: application/x-www-form-urlencoded
+
+name=aswath&age=5
