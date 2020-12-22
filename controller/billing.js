@@ -6,7 +6,7 @@ const { logger } = require("../helper/logger.js");
 
 exports.getAll = async (req, res, next) => {
   try {
-    const result = await Billing.find({}, { __v: 0 });
+    const result = await Billing.find({}, { __v: 0 }).sort({createdAt:-1});
     if (!result) {
       throw createError(404, "Billing does not exist");
     }
